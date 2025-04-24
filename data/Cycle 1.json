@@ -1,0 +1,506 @@
+{
+    "name": "Cycle 1",
+    "duration": 7,
+    "rir_scheme": [
+        3,
+        2,
+        2,
+        1,
+        1,
+        0,
+        "Deload"
+    ],
+    "data": {
+        "1": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 15,
+                "actual": 0,
+                "acutal": 12
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "2": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "3": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "4": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "5": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "6": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        },
+        "7": {
+            "Abdominals": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Abductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Adductors": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Biceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Calves": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Chest": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Forearms": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Glutes": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Hamstrings": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lats": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Lower Back": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Neck": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Quadriceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Shoulders": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Traps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Triceps": {
+                "goal": 0,
+                "actual": 0
+            },
+            "Upper Back": {
+                "goal": 0,
+                "actual": 0
+            }
+        }
+    }
+}

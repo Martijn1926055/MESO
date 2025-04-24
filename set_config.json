@@ -1,0 +1,70 @@
+{
+    "Abdominals": {
+        "start": 9,
+        "increase": 10
+    }, 
+    "Abductors": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Adductors": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Biceps": {
+        "start": 15,
+        "increase": 15
+    },  
+    "Calves": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Chest": {
+        "start": 18,
+        "increase": 10
+    }, 
+    "Forearms": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Glutes": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Hamstrings": {
+        "start": 15,
+        "increase": 8
+    },  
+    "Lats": {
+        "start": 15,
+        "increase": 10
+    }, 
+    "Lower Back": {
+        "start": 0,
+        "increase": 10
+    },  
+    "Neck": {
+        "start": 0,
+        "increase": 10
+    }, 
+    "Quadriceps": {
+        "start": 18,
+        "increase": 8
+    },  
+    "Shoulders": {
+        "start": 18,
+        "increase": 12
+    },  
+    "Traps": {
+        "start": 12,
+        "increase": 10
+    }, 
+    "Triceps": {
+        "start": 15,
+        "increase": 10
+    },  
+    "Upper Back": {
+        "start": 15,
+        "increase": 10
+    } 
+}
