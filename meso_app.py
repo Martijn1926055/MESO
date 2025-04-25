@@ -9,6 +9,12 @@ def load_muscle_groups():
     
 MUSCLE_GROUPS = load_muscle_groups()
 
+def load_set_config():
+    with open("set_config.json", "r") as f:
+        return json.load(f)
+
+SET_CONFIG = load_set_config()
+
 class Meso:
     def __init__(self, root):
         self.root = root
@@ -62,6 +68,13 @@ class Meso:
         duration = int(self.duration_entry.get())
         self.cycle = Mesocycle(name, duration)
         messagebox.showinfo("Created", f"New cycle '{name}' created.")
+
+    def generate_balanced_cycle(self):
+        name = self.name_entry.get()
+        duration = int(self.duration_entry.get())
+        self.cycle = Mesocycle(name, duration)
+        self.cycle.generate_balanced(duration, SET_CONFIG)
+        messagebox.showinfo("Generated", f"New cycle '{name}' created")
 
     def set_goal(self):
         if not self.cycle: return
