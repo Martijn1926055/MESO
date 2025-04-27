@@ -15,7 +15,7 @@ def load_set_config():
 
 SET_CONFIG = load_set_config()
 
-duration_options = ["1 week", "2 weeks", "3 weeks", "4 weeks", "5 weeks", "6 weeks", "7 weeks", "8 weeks"]
+duration_options = ["4 weeks", "5 weeks", "6 weeks", "7 weeks", "8 weeks"]
 
 class Meso:
     def __init__(self, root):
@@ -27,7 +27,6 @@ class Meso:
 
     def setup_gui(self):
 
-        #ttk.Button(self.root, text="New Cycle", command=self.create_cycle).grid(row=0, column=2)
         ttk.Button(self.root, text= "Generate Cycle", command=self.open_generate_window).grid(row=0, column=2)
         ttk.Button(self.root, text="Load", command=self.load_cycle).grid(row=0, column=3)
         ttk.Button(self.root, text="Save", command=self.save_cycle).grid(row=0, column=4)
@@ -77,12 +76,19 @@ class Meso:
         self.gen_window.geometry("400x400")
         self.gen_window.title("Generate new cycle")
 
+        #duration selection
         ttk.Label(self.gen_window, text="Duration (weeks):").grid(row=0, column=0)
         self.duration = tk.StringVar(value="Select duration")
         self.gen_duration = ttk.OptionMenu(self.gen_window, self.duration, *duration_options)
         self.gen_duration.grid(row=0, column=1)
 
+        #specialization selection
+        ttk.Label(self.gen_window, text="Specialization:").grid(row=1, column=0)
+        self.specialization = tk.IntVar(value=0)
+        self.gen_specialization = ttk.Checkbutton(self.gen_window, variable=self.specialization)
+        self.gen_specialization.grid(row=1, column=1)
 
+        ttk.Button(self.gen_window, text="Create cycle", command=self.generate_balanced_cycle)
 
     def set_goal(self):
         if not self.cycle: return
