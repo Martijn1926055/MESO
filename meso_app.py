@@ -15,6 +15,8 @@ def load_set_config():
 
 SET_CONFIG = load_set_config()
 
+duration_options = ["1 week", "2 weeks", "3 weeks", "4 weeks", "5 weeks", "6 weeks", "7 weeks", "8 weeks"]
+
 class Meso:
     def __init__(self, root):
         self.root = root
@@ -24,15 +26,9 @@ class Meso:
         self.setup_gui()
 
     def setup_gui(self):
-        self.name_entry = ttk.Entry(self.root)
-        self.name_entry.insert(0, "Cycle Name")
-        self.name_entry.grid(row=0, column=0)
 
-        self.duration_entry = ttk.Entry(self.root)
-        self.duration_entry.insert(0, "7")
-        self.duration_entry.grid(row=0, column=1)
-
-        ttk.Button(self.root, text="New Cycle", command=self.create_cycle).grid(row=0, column=2)
+        #ttk.Button(self.root, text="New Cycle", command=self.create_cycle).grid(row=0, column=2)
+        ttk.Button(self.root, text= "Generate Cycle", command=self.open_generate_window).grid(row=0, column=2)
         ttk.Button(self.root, text="Load", command=self.load_cycle).grid(row=0, column=3)
         ttk.Button(self.root, text="Save", command=self.save_cycle).grid(row=0, column=4)
 
@@ -58,7 +54,7 @@ class Meso:
         ttk.Button(self.root, text="Log Actual", command=self.set_actual).grid(row=2, column=3)
 
         #Display
-        self.output = tk.Text(self.root, height=10, width=70)
+        self.output = tk.Text(self.root, height=25, width=100)
         self.output.grid(row=3, column=0, columnspan=5)
 
         ttk.Button(self.root, text="View Week", command=self.view_week).grid(row=4, column=0, columnspan=5)
@@ -74,7 +70,19 @@ class Meso:
         duration = int(self.duration_entry.get())
         self.cycle = Mesocycle(name, duration)
         self.cycle.generate_balanced(duration, SET_CONFIG)
-        messagebox.showinfo("Generated", f"New cycle '{name}' created")
+        messagebox.showinfo("Generated", f"New balanced cycle '{name}' created")
+
+    def open_generate_window(self):
+        self.gen_window = tk.Toplevel(self.root)
+        self.gen_window.geometry("400x400")
+        self.gen_window.title("Generate new cycle")
+
+        ttk.Label(self.gen_window, text="Duration (weeks):").grid(row=0, column=0)
+        self.duration = tk.StringVar(value="Select duration")
+        self.gen_duration = ttk.OptionMenu(self.gen_window, self.duration, *duration_options)
+        self.gen_duration.grid(row=0, column=1)
+
+
 
     def set_goal(self):
         if not self.cycle: return
