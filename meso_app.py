@@ -64,11 +64,12 @@ class Meso:
         self.cycle = Mesocycle(name, duration)
         messagebox.showinfo("Created", f"New cycle '{name}' created.")
 
-    def generate_balanced_cycle(self):
+    def generate_cycle(self):
         name = self.name_entry.get()
-        duration = int(self.duration_entry.get())
+        duration = self.duration_pick.get()
+        specialization = self.specialization_pick.get()
         self.cycle = Mesocycle(name, duration)
-        self.cycle.generate_balanced(duration, SET_CONFIG)
+        self.cycle.generate_balanced(name, duration, specialization)
         messagebox.showinfo("Generated", f"New balanced cycle '{name}' created")
 
     def open_generate_window(self):
@@ -76,19 +77,25 @@ class Meso:
         self.gen_window.geometry("400x400")
         self.gen_window.title("Generate new cycle")
 
+        ttk.Label(self.gen_window, text="Name:").grid(row=0, column=0)
+        self.name_entry = tk.StringVar()
+        self.gen_name = ttk.Entry(self.gen_window, textvariable=self.name_entry)
+        self.gen_name.grid(row=0, column=1)
+
         #duration selection
-        ttk.Label(self.gen_window, text="Duration (weeks):").grid(row=0, column=0)
-        self.duration = tk.StringVar(value="Select duration")
-        self.gen_duration = ttk.OptionMenu(self.gen_window, self.duration, *duration_options)
-        self.gen_duration.grid(row=0, column=1)
+        ttk.Label(self.gen_window, text="Duration (weeks):").grid(row=1, column=0)
+        self.duration_pick = tk.IntVar(value="Select duration")
+        self.gen_duration = ttk.Spinbox(self.gen_window, from_=4, to=8, textvariable=self.duration_pick)
+        self.gen_duration.grid(row=1, column=1)
 
         #specialization selection
-        ttk.Label(self.gen_window, text="Specialization:").grid(row=1, column=0)
-        self.specialization = tk.IntVar(value=0)
-        self.gen_specialization = ttk.Checkbutton(self.gen_window, variable=self.specialization)
-        self.gen_specialization.grid(row=1, column=1)
+        ttk.Label(self.gen_window, text="Specialization:").grid(row=2, column=0)
+        self.specialization_pick = tk.StringVar(value=0)
+        self.gen_specialization = ttk.OptionMenu(self.gen_window, self.specialization_pick, *["None", *MUSCLE_GROUPS])
+        self.gen_specialization.grid(row=2, column=1)
 
-        ttk.Button(self.gen_window, text="Create cycle", command=self.generate_balanced_cycle)
+        #press to create cycle
+        ttk.Button(self.gen_window, text="Create cycle", command=self.generate_cycle).grid(row=5, column=0, columnspan=5)
 
     def set_goal(self):
         if not self.cycle: return

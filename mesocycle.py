@@ -43,14 +43,22 @@ class Mesocycle:
             cycle.data = obj['data']
             return cycle
         
-    def generate_balanced(self, duration, base_config=SET_CONFIG): 
+    def generate_balanced(self, name, duration, specialization): 
+        self.name = name
+        
         for week in range(1, duration+1):
             self.data[week] = {}
             for muscle in MUSCLE_GROUPS:
-                if base_config and muscle in base_config:
-                    start = base_config[muscle]["start"]
-                    inc_pct = base_config[muscle]["increase"]
-                    goal = int(start * ((1 + inc_pct / 100) ** (week - 1)))
+                if SET_CONFIG and muscle in SET_CONFIG:
+                    start = SET_CONFIG[muscle]["start"]
+                    inc_pct = SET_CONFIG[muscle]["increase"]
+                    if specialization==muscle:
+                        goal = int(start * ((1 + 20 / 100) ** (week - 1)))
+                    elif specialization=="None":
+                        goal = int(start * ((1 + inc_pct / 100) ** (week - 1)))
                 else:
                     goal = 0
                 self.data[week][muscle] = {"goal": goal, "actual": 0}
+
+        
+
