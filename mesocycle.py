@@ -19,12 +19,10 @@ def load_RIR_schemes():
     
 RIR_SCHEMES = load_RIR_schemes()
 
-
 class Mesocycle:
     def __init__(self, name, duration):
         self.name = name
         self.duration = duration
-        #self.rir_scheme = [3, 2, 2, 1, 1, 0, "Deload"][:duration]
         self.data = {week: {muscle: {"goal": 0, "actual": 0} for muscle in MUSCLE_GROUPS}for week in range(1, duration+1)}
 
     def set_goal(self, week, muscle, sets):

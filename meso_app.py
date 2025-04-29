@@ -15,6 +15,12 @@ def load_set_config():
 
 SET_CONFIG = load_set_config()
 
+def load_RIR_schemes():
+    with open("RIR_schemes.json", "r") as f:
+        return json.load(f)
+    
+RIR_SCHEMES = load_RIR_schemes()
+
 duration_options = ["4 weeks", "5 weeks", "6 weeks", "7 weeks", "8 weeks"]
 
 class Meso:
@@ -114,7 +120,8 @@ class Meso:
     def view_week(self):
         if not self.cycle: return
         week = self.week_var.get()
-        output = f"Week {week}:\n"
+        duration = self.cycle.duration
+        output = f"Week {week}: RIR {RIR_SCHEMES[f"{duration}"][week-1]}\n"
         for m in MUSCLE_GROUPS:
             g = self.cycle.data[week][m]["goal"]
             a = self.cycle.data[week][m]["actual"]    
