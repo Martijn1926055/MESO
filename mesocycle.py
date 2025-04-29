@@ -1,23 +1,10 @@
 import json
 import os
+from config_loader import load_config
 
-def load_muscle_groups():
-    with open("muscle_groups.json", "r") as f:
-        return json.load(f)
-    
-MUSCLE_GROUPS = load_muscle_groups()
-
-def load_set_config():
-    with open("set_config.json", "r") as f:
-        return json.load(f)
-
-SET_CONFIG = load_set_config()
-
-def load_RIR_schemes():
-    with open("RIR_schemes.json", "r") as f:
-        return json.load(f)
-    
-RIR_SCHEMES = load_RIR_schemes()
+MUSCLE_GROUPS = load_config("muscle_groups.json")
+SET_CONFIG = load_config("set_config.json")
+RIR_SCHEMES = load_config("rir_schemes.json")
 
 class Mesocycle:
     def __init__(self, name, duration):
