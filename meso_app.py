@@ -69,7 +69,7 @@ class Meso:
         duration = self.duration_pick.get()
         specialization = self.specialization_pick.get()
         self.cycle = Mesocycle(name, duration)
-        self.cycle.generate_balanced(name, duration, specialization)
+        self.cycle.generate_balanced(duration, specialization)
         messagebox.showinfo("Generated", f"New balanced cycle '{name}' created")
 
     def open_generate_window(self):
