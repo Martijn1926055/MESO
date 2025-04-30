@@ -101,6 +101,9 @@ class Meso:
     def view_week(self):
         if not self.cycle: return
         week = self.week_var.get()
+        if week > self.duration_pick.get():
+            messagebox.showerror("Error", "Week out of cycle scope!")
+            return
         duration = self.cycle.duration
         output = f"Week {week}: RIR {RIR_SCHEMES[f"{duration}"][week-1]}\n"
         for m in MUSCLE_GROUPS:
