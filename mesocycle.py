@@ -37,10 +37,10 @@ class Mesocycle:
     def generate_balanced(self, duration, specialization): 
         self.rir_scheme = RIR_SCHEMES[f"{duration}"]
         
-        for week in range(1, duration+1):
+        for week in range(1, duration):
             self.data[week] = {}
             for muscle in MUSCLE_GROUPS:
-                if SET_CONFIG and muscle in SET_CONFIG:
+                if muscle in SET_CONFIG:
                     start = SET_CONFIG[muscle]["start"]
                     inc_pct = SET_CONFIG[muscle]["increase"]
                     if specialization==muscle:
@@ -50,6 +50,15 @@ class Mesocycle:
                 else:
                     goal = 0
                 self.data[week][muscle] = {"goal": goal, "actual": 0}
+
+        for muscle in MUSCLE_GROUPS:
+            if muscle in SET_CONFIG:
+                start = SET_CONFIG[muscle]["start"]
+                goal = int(start * 0.6)
+            else:
+                goal = 0
+            self.data[duration][muscle] = {"goal": goal, "actual": 0}
+
 
         
 

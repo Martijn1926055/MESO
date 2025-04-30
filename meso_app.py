@@ -51,12 +51,6 @@ class Meso:
 
         ttk.Button(self.root, text="View Week", command=self.view_week).grid(row=4, column=0, columnspan=5)
 
-    def create_cycle(self):
-        name = self.name_entry.get()
-        duration = int(self.duration_entry.get())
-        self.cycle = Mesocycle(name, duration)
-        messagebox.showinfo("Created", f"New cycle '{name}' created.")
-
     def generate_cycle(self):
         name = self.name_entry.get()
         duration = self.duration_pick.get()
